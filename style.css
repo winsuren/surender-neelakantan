@@ -1,0 +1,735 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.bg-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-container {
+  height: 100vh;
+  color: #fff;
+  position: relative;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-wrapper {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+
+.name {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.35);
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Exo", sans-serif;
+  width: 640px;
+  margin: 10px auto;
+}
+
+.role {
+  font-size: 28px;
+  margin-bottom: 70px;
+  line-height: 1.4;
+  font-family: "Aboreto", cursive;
+  padding-top: 10px;
+}
+
+.skill {
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-top: 30px;
+  letter-spacing: 6px;
+}
+
+.profile-container,
+.experiences-container,
+.skills-container,
+.achievements-container,
+.contact-container {
+  height: 100vh;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  z-index: 999;
+  padding: 40px 220px;
+}
+
+.experiences-container {
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
+.achievements-container {
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
+.scroll-down {
+  height: 80px;
+  width: 110px;
+  display: block;
+  position: absolute;
+  top: -80px;
+  right: 5%;
+  background-color: #000000;
+  text-align: center;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.scroll-down .glyphicon {
+  color: #ffffff;
+  font-size: 30px;
+  padding-right: 2px;
+  padding-top: 20px;
+  animation-name: wiggle;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes wiggle {
+  0% {
+    padding-top: 20px;
+  }
+  50% {
+    padding-top: 28px;
+  }
+  100% {
+    padding-top: 20px;
+  }
+}
+
+#nav-bar {
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  width: 110px;
+  z-index: 1000;
+}
+
+#nav-bar.fixed-nav {
+  position: fixed;
+  top: 60px;
+}
+
+.nav-item {
+  height: 80px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Exo", sans-serif;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background-color: purple;
+  cursor: default;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding-top: 30px;
+  height: 80px;
+}
+
+.nav-item.active a {
+  cursor: default;
+}
+
+.nav-item:hover a {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  margin: 20px 0px;
+  font-family: "Exo", sans-serif;
+}
+
+.section-sub-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 300;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #cccccc;
+  font-family: "Exo", sans-serif;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-left,
+.profile-right {
+  width: 50%;
+  padding: 50px;
+  padding-top: 100px;
+  font-size: 20px;
+  font-family: "Exo";
+  line-height: 35px;
+}
+
+.photo-container {
+  width: 204px;
+  height: 204px;
+  border-radius: 50%;
+  border: 2px solid #565656;
+  margin: 40px auto;
+}
+
+.photo-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social img {
+  width: 50px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.work-experience {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  font-size: 20px;
+  font-family: "Exo";
+}
+
+.work-left {
+  width: 50%;
+  border-right: 1px solid #fff;
+  height: 600px;
+  position: relative;
+}
+
+.work-right {
+  width: 50%;
+  height: 600px;
+  position: relative;
+}
+
+.work-item {
+  width: 400px;
+  height: 125px;
+  position: absolute;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.work-item-1 {
+  top: 25px;
+  left: 0px;
+  padding-left: 30px;
+}
+.work-item-2 {
+  top: 175px;
+  right: 0px;
+  padding-right: 30px;
+  text-align: right;
+}
+.work-item-3 {
+  top: 325px;
+  left: 0px;
+  padding-left: 30px;
+}
+.work-item-4 {
+  top: 475px;
+  right: 0px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.work-role {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.work-company {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.work-duration {
+  font-size: 15px;
+  color: lightgrey;
+}
+
+.work-item-1-circle {
+  position: absolute;
+  top: 25px;
+  left: -11px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #fff;
+  background-color: #2e2e2e;
+  z-index: 9;
+  border-radius: 50%;
+}
+
+.work-item-2-circle {
+  position: absolute;
+  top: 175px;
+  right: -11px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  z-index: 9;
+  border-radius: 50%;
+}
+
+.work-item-3-circle {
+  position: absolute;
+  top: 325px;
+  left: -11px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  z-index: 9;
+  border-radius: 50%;
+}
+
+.work-item-4-circle {
+  position: absolute;
+  top: 475px;
+  right: -11px;
+  width: 22px;
+  height: 22px;
+  z-index: 9;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.skill-item {
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-top: 30px;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills-container .section-content {
+  width: 600px;
+  margin: 60px auto;
+}
+
+.glyphicon-star {
+  color: darkgray;
+}
+
+.glyphicon-star.filled {
+  color: purple;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 30px;
+  font-family: "EXO";
+  margin-top: 250px;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.contact-wrapper img {
+  height: 100px;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.awards-certifications {
+  display: flex;
+  justify-content: space-between;
+}
+
+.awards,
+.certifications {
+  width: 50%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 30px;
+}
+
+.awards {
+  border-right: 1px solid #fff;
+}
+
+.sub-title {
+  font-size: 30px;
+  font-family: "EXO";
+  margin-bottom: 50px;
+}
+
+.award-item,
+.certification-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.award-icon img {
+  width: 30px;
+  margin-right: 30px;
+}
+
+.award-text,
+.certification-text {
+  font-size: 24px;
+}
+
+.certification-icon {
+  font-size: 30px;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 1650px) {
+  .sub-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .award-item,
+  .certification-item {
+    margin-bottom: 40px;
+  }
+
+  .award-icon img {
+    width: 26px;
+    margin-right: 26px;
+  }
+
+  .award-text,
+  .certification-text {
+    font-size: 22px;
+  }
+
+  .certification-icon {
+    font-size: 26px;
+    margin-right: 26px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .profile-container,
+  .experiences-container,
+  .skills-container,
+  .achievements-container,
+  .contact-container {
+    padding: 40px 190px;
+  }
+  .profile-left,
+  .profile-right {
+    padding: 30px;
+    padding-top: 60px;
+  }
+  .sub-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .award-item,
+  .certification-item {
+    margin-bottom: 25px;
+  }
+
+  .award-icon img {
+    width: 26px;
+    margin-right: 24px;
+  }
+
+  .award-text,
+  .certification-text {
+    font-size: 19px;
+  }
+
+  .certification-icon {
+    font-size: 24px;
+    margin-right: 24px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .profile-container,
+  .experiences-container,
+  .skills-container,
+  .achievements-container,
+  .contact-container {
+    padding: 40px 180px;
+  }
+
+  .profile-left,
+  .profile-right {
+    padding: 20px;
+    padding-top: 40px;
+    font-size: 18px;
+  }
+
+  .skills-container .section-content {
+    width: 500px;
+  }
+
+  .skill-item {
+    font-size: 22px;
+  }
+
+  .sub-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .achievements-container {
+    padding: 40px 140px;
+  }
+
+  .award-item,
+  .certification-item {
+    margin-bottom: 20px;
+  }
+
+  .award-icon img {
+    width: 26px;
+    margin-right: 24px;
+  }
+
+  .award-text,
+  .certification-text {
+    font-size: 18px;
+  }
+
+  .certification-icon {
+    font-size: 24px;
+    margin-right: 24px;
+  }
+
+  #nav-bar {
+    opacity: 0.5;
+  }
+
+  #nav-bar:hover {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .profile-container,
+  .experiences-container,
+  .skills-container,
+  .achievements-container,
+  .contact-container {
+    padding: 40px 120px;
+  }
+  #nav-bar,
+  .scroll-down {
+    width: 90px;
+  }
+  .nav-item {
+    font-size: 12px;
+  }
+  .profile-content {
+    display: block;
+  }
+  .profile-left,
+  .profile-right {
+    padding: 10px;
+    padding-top: 20px;
+    font-size: 18px;
+    width: 100%;
+    line-height: 30px;
+  }
+  .photo-container {
+    margin: 20px auto;
+  }
+  .name {
+    font-size: 40px;
+    width: 420px;
+  }
+  .role {
+    font-size: 20px;
+  }
+  .skill {
+    font-size: 22px;
+  }
+
+  .skills-container .section-content {
+    width: 430px;
+  }
+
+  .achievements-container {
+    padding: 40px 80px;
+  }
+
+  .award-item,
+  .certification-item {
+    margin-bottom: 20px;
+  }
+
+  .award-icon img {
+    width: 22px;
+    margin-right: 20px;
+  }
+
+  .award-text,
+  .certification-text {
+    font-size: 16px;
+  }
+
+  .certification-icon {
+    font-size: 22px;
+    margin-right: 22px;
+  }
+
+  .work-item {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .name {
+    font-size: 30px;
+    width: 315px;
+  }
+  .role {
+    font-size: 16px;
+  }
+  .skill {
+    font-size: 18px;
+  }
+  .section-title {
+    font-size: 40px;
+  }
+  .profile-container {
+    padding: 40px 70px;
+  }
+  .work-item {
+    width: 275px;
+  }
+  .work-experience {
+    font-size: 15px;
+  }
+  .skills-container .section-content {
+    width: 340px;
+  }
+  .skill-item {
+    font-size: 18px;
+  }
+
+  .achievements-container {
+    padding: 40px 55px;
+  }
+
+  .awards,
+  .certifications {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .award-item,
+  .certification-item {
+    margin-bottom: 18px;
+  }
+
+  .award-icon img {
+    width: 20px;
+    margin-right: 18px;
+  }
+
+  .award-text,
+  .certification-text {
+    font-size: 16px;
+  }
+
+  .certification-icon {
+    font-size: 18px;
+    margin-right: 18px;
+  }
+  .contact-wrapper img {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .name {
+    font-size: 30px;
+  }
+  .role {
+    font-size: 16px;
+  }
+  .skill {
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+  .profile-container,
+  .skills-container {
+    padding: 40px 50px;
+  }
+  .work-item {
+    width: 230px;
+    font-size: 16px;
+  }
+  .achievements-container {
+    padding: 40px 40px;
+  }
+}
