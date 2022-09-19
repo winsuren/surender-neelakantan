@@ -755,4 +755,16 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .work-item-1 {
+    padding-left: 20px;
+  }
+  .work-item-2 {
+    padding-right: 20px;
+  }
+  .work-item-3 {
+    padding-left: 20px;
+  }
+  .work-item-4 {
+    padding-right: 20px;
+  }
 }
