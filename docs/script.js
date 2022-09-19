@@ -7,7 +7,6 @@ $(document).ready(function () {
       } else {
         $("#nav-bar").removeClass("fixed-nav");
       }
-  
       if ($(window).scrollTop() > $(".profile-container").offset().top - 2) {
         resetActive();
         $("#profile-nav-item").addClass("active");
@@ -32,7 +31,7 @@ $(document).ready(function () {
         resetActive();
         $("#contact-nav-item").addClass("active");
       }
-    } {
+    } else {
       if ($(window).scrollTop() > $(".scroll-down").offset().top + 20) {
         $("#nav-bar").addClass("fixed-nav");
       } else {
@@ -63,7 +62,6 @@ $(document).ready(function () {
         resetActive();
         $("#contact-nav-item").addClass("active");
       }
-      
       $(".overlay").css("height", window.outerHeight + "px");
       $(".bg-container").css("height", window.outerHeight + "px");
       $(".top-container").css("height", window.outerHeight + "px");
