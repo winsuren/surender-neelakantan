@@ -35,7 +35,6 @@ $(document).ready(function () {
       $(".overlay").css("height", window.outerHeight + "px")
       $(".bg-container").css("height", window.outerHeight + "px")
       $(".top-container").css("height", window.outerHeight + "px")
-      $(".top-container").css("height", window.outerHeight + "px")
       $(".profile-container").css("height", window.outerHeight + "px")
       $(".experiences-container").css("height", window.outerHeight + "px")
       $(".skills-container").css("height", window.outerHeight + "px")

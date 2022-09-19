@@ -733,13 +733,18 @@ body {
   .achievements-container {
     padding: 30px 20px;
   }
-  .scroll-down {
-    top: -140px;
-  }
   .nav-item:hover a {
     color: rgba(255, 255, 255, 1);
   }
   #nav-bar {
     opacity: 1;
+  }
+  .profile-left {
+    padding-top: 10px;
+    padding-bottom: 0;
+    line-height: 27px;
+  }
+  .social {
+    margin-top: 0;
   }
 }
