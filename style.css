@@ -736,4 +736,7 @@ body {
   .achievements-container {
     padding: 40px 40px;
   }
+  .scroll-down {
+    top: -140px;
+  }
 }
