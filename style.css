@@ -768,3 +768,28 @@ body {
     padding-right: 20px;
   }
 }
+
+@media screen {
+}
+
+@media (orientation: landscape) {
+  .normal {
+    display: none;
+  }
+
+  .landscape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (orientation: portrait) {
+  .normal {
+    display: block;
+  }
+
+  .landscape {
+    display: none;
+  }
+}
