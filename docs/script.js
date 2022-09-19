@@ -1,8 +1,4 @@
 $(document).ready(function () {
-  alert(window.innerWidth)
-  alert(window.innerHeight)
-  alert(window.outerWidth)
-  alert(window.outerHeight)
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > $(".scroll-down").offset().top + 20) {
       $("#nav-bar").addClass("fixed-nav");
@@ -35,25 +31,17 @@ $(document).ready(function () {
       $("#contact-nav-item").addClass("active");
     }
 
-    $("#profile-nav-item").on("click", function() {
-      $("#profile-nav-item").addClass("active");
-    });
-
-    $("#experience-nav-item").on("click", function() {
-      $("#experience-nav-item").addClass("active");
-    });
-
-    $("#skill-nav-item").on("click", function() {
-      $("#skill-nav-item").addClass("active");
-    });
-
-    $("#achievement-nav-item").on("click", function() {
-      $("#achievement-nav-item").addClass("active");
-    });
-
-    $("#contact-nav-item").on("click", function() {
-      $("#contact-nav-item").addClass("active");
-    });
+    if (window.outerWidth < 500) {
+      $(".overlay").css("height", window.outerHeight + "px")
+      $(".bg-container").css("height", window.outerHeight + "px")
+      $(".top-container").css("height", window.outerHeight + "px")
+      $(".top-container").css("height", window.outerHeight + "px")
+      $(".profile-container").css("height", window.outerHeight + "px")
+      $(".experiences-container").css("height", window.outerHeight + "px")
+      $(".skills-container").css("height", window.outerHeight + "px")
+      $(".achievements-container").css("height", window.outerHeight + "px")
+      $(".contact-container").css("height", window.outerHeight + "px")
+    }
 
   });
 
