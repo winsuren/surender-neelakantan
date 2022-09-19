@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  alert(window.innerWidth)
+  alert(window.innerHeight)
+  alert(window.outerWidth)
+  alert(window.outerHeight)
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > $(".scroll-down").offset().top + 20) {
       $("#nav-bar").addClass("fixed-nav");
