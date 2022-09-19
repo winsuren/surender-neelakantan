@@ -19,6 +19,7 @@ body {
   left: 0px;
   width: 100vw;
   height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: rgba(0, 0, 0, 0.75);
 }
 
@@ -28,6 +29,7 @@ body {
   left: 0px;
   width: 100vw;
   height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .bg-container img {
@@ -38,6 +40,7 @@ body {
 
 .top-container {
   height: 100vh;
+  min-height: -webkit-fill-available;
   color: #fff;
   position: relative;
   z-index: 999;
@@ -85,6 +88,7 @@ body {
 .achievements-container,
 .contact-container {
   height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: #fff;
   color: #000;
   position: relative;
