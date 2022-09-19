@@ -723,20 +723,27 @@ body {
     letter-spacing: 3px;
   }
   .section-title {
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom: 10px;
   }
   .profile-container,
   .skills-container {
-    padding: 40px 50px;
+    padding: 30px 30px;
   }
   .work-item {
     width: 230px;
     font-size: 16px;
   }
   .achievements-container {
-    padding: 40px 40px;
+    padding: 30px 20px;
   }
   .scroll-down {
     top: -140px;
+  }
+  .nav-item:hover a {
+    color: rgba(255, 255, 255, 1);
+  }
+  #nav-bar {
+    opacity: 1;
   }
 }
