@@ -747,4 +747,12 @@ body {
   .social {
     margin-top: 0;
   }
+  .scroll-down {
+    top: -140px;
+  }
+  .awards,
+  .certifications {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

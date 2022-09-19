@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $(window).on("scroll", function () {
+    $(".scroll-down").css("top", "-80px");
     if ($(window).scrollTop() > $(".scroll-down").offset().top + 20) {
       $("#nav-bar").addClass("fixed-nav");
     } else {
@@ -32,16 +33,15 @@ $(document).ready(function () {
     }
 
     if (window.outerWidth < 500) {
-      $(".overlay").css("height", window.outerHeight + "px")
-      $(".bg-container").css("height", window.outerHeight + "px")
-      $(".top-container").css("height", window.outerHeight + "px")
-      $(".profile-container").css("height", window.outerHeight + "px")
-      $(".experiences-container").css("height", window.outerHeight + "px")
-      $(".skills-container").css("height", window.outerHeight + "px")
-      $(".achievements-container").css("height", window.outerHeight + "px")
-      $(".contact-container").css("height", window.outerHeight + "px")
+      $(".overlay").css("height", window.outerHeight + "px");
+      $(".bg-container").css("height", window.outerHeight + "px");
+      $(".top-container").css("height", window.outerHeight + "px");
+      $(".profile-container").css("height", window.outerHeight + "px");
+      $(".experiences-container").css("height", window.outerHeight + "px");
+      $(".skills-container").css("height", window.outerHeight + "px");
+      $(".achievements-container").css("height", window.outerHeight + "px");
+      $(".contact-container").css("height", window.outerHeight + "px");
     }
-
   });
 
   function resetActive() {
