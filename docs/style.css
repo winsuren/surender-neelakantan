@@ -772,7 +772,7 @@ body {
 @media screen {
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .normal {
     display: none;
   }
@@ -781,10 +781,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    font-size: 20px;
+    font-weight: bold;
   }
 }
 
-@media (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .normal {
     display: block;
   }
