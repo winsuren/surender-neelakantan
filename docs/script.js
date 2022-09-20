@@ -37,51 +37,6 @@ $(document).ready(function () {
         resetActive();
         $("#contact-nav-item").addClass("active");
       }
-    } else {
-      if ($(window).scrollTop() > $(".scroll-down").offset().top + 20) {
-        $("#nav-bar").addClass("fixed-nav");
-      } else {
-        $("#nav-bar").removeClass("fixed-nav");
-      }
-
-      if ($(window).scrollTop() > $(".profile-container").offset().top - 32) {
-        resetActive();
-        $("#profile-nav-item").addClass("active");
-      }
-
-      if (
-        $(window).scrollTop() >
-        $(".experiences-container").offset().top - 32
-      ) {
-        resetActive();
-        $("#experience-nav-item").addClass("active");
-      }
-
-      if ($(window).scrollTop() > $(".skills-container").offset().top - 32) {
-        resetActive();
-        $("#skill-nav-item").addClass("active");
-      }
-
-      if (
-        $(window).scrollTop() >
-        $(".achievements-container").offset().top - 32
-      ) {
-        resetActive();
-        $("#achievement-nav-item").addClass("active");
-      }
-
-      if ($(window).scrollTop() > $(".contact-container").offset().top - 32) {
-        resetActive();
-        $("#contact-nav-item").addClass("active");
-      }
-      $(".overlay").css("height", window.outerHeight + "px");
-      $(".bg-container").css("height", window.outerHeight + "px");
-      $(".top-container").css("height", window.outerHeight + "px");
-      $(".profile-container").css("height", window.outerHeight + "px");
-      $(".experiences-container").css("height", window.outerHeight + "px");
-      $(".skills-container").css("height", window.outerHeight + "px");
-      $(".achievements-container").css("height", window.outerHeight + "px");
-      $(".contact-container").css("height", window.outerHeight + "px");
     }
   });
 
@@ -94,7 +49,6 @@ $(document).ready(function () {
   }
 
   if (window.outerHeight < 800) {
-    $(".scroll-down").css("top", "-80px");
     $(".section-title").css("fontSize", "22px");
     $(".section-sub-title").css("fontSize", "20px");
     $(".photo-container").css("width", "154px");
@@ -123,7 +77,6 @@ $(document).ready(function () {
   } 
   
   if (window.outerHeight < 700) {
-    $(".scroll-down").css("top", "-80px");
     $(".section-title").css("fontSize", "20px");
     $(".section-sub-title").css("fontSize", "18px");
     $(".photo-container").css("width", "134px");

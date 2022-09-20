@@ -657,11 +657,19 @@ body {
   .section-title {
     font-size: 40px;
   }
+  .profile-container,
+  .experiences-container,
+  .skills-container,
+  .achievements-container,
+  .contact-container {
+    height: auto;
+    min-height: 100vh;
+  }
   .profile-container {
     padding: 40px 70px;
   }
   .work-item {
-    width: 275px;
+    width: 200px;
   }
   .work-experience {
     font-size: 15px;
@@ -705,6 +713,10 @@ body {
   .contact-wrapper img {
     height: 60px;
   }
+
+  .scroll-down-container, #nav-bar {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -716,7 +728,7 @@ body {
   }
   .skill {
     font-size: 18px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
   .section-title {
     font-size: 25px;
@@ -724,10 +736,10 @@ body {
   }
   .profile-container,
   .skills-container {
-    padding: 30px 30px;
+    padding: 30px 40px;
   }
   .work-item {
-    width: 230px;
+    width: 200px;
     font-size: 16px;
   }
   .achievements-container {
@@ -752,8 +764,8 @@ body {
   }
   .awards,
   .certifications {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .work-item-1 {
     padding-left: 20px;
@@ -767,9 +779,6 @@ body {
   .work-item-4 {
     padding-right: 20px;
   }
-}
-
-@media screen {
 }
 
 @media screen and (orientation: landscape) {
