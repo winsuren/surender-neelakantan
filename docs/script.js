@@ -74,8 +74,8 @@ $(document).ready(function () {
     $(".sub-title").css("fontSize", "18px");
     $(".award-text").css("fontSize", "14px");
     $(".certification-text").css("fontSize", "14px");
-  } 
-  
+  }
+
   if (window.outerHeight < 700) {
     $(".section-title").css("fontSize", "20px");
     $(".section-sub-title").css("fontSize", "18px");
